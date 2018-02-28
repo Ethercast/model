@@ -1,8 +1,9 @@
 {
   "name": "@ethercast/ethercast-models",
   "version": "0.0.0",
-  "description": "",
+  "description": "models for ethercast.io",
   "keywords": [],
+  "private": false,
   "main": "dist/ethercast-models.umd.js",
   "module": "dist/ethercast-models.es5.js",
   "typings": "dist/types/ethercast-models.d.ts",
