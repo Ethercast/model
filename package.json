@@ -1,5 +1,5 @@
 {
-  "name": "@ethercast/ethercast-models",
+  "name": "ethercast-models",
   "version": "0.0.0",
   "description": "models for ethercast.io",
   "keywords": [],
@@ -10,10 +10,10 @@
   "files": [
     "dist"
   ],
-  "author": "Ethercast <hello@ethercast.io>",
+  "author": "Ethercast <dev@ethercast.io>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Ethercast/ethercast-model"
   },
   "license": "MIT",
   "engines": {
