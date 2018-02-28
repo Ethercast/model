@@ -4,8 +4,7 @@
   "description": "models for ethercast.io",
   "keywords": [],
   "private": false,
-  "main": "dist/ethercast-models.umd.js",
-  "module": "dist/ethercast-models.es5.js",
+  "main": "dist/lib/ethercast-models.js",
   "typings": "dist/types/ethercast-models.d.ts",
   "files": [
     "dist"
@@ -22,8 +21,7 @@
   "scripts": {
     "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src",
-    "start": "rollup -c rollup.config.ts -w",
+    "build": "tsc --module commonjs",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
@@ -90,11 +88,6 @@
     "prompt": "^1.0.0",
     "replace-in-file": "^3.0.0-beta.2",
     "rimraf": "^2.6.1",
-    "rollup": "^0.55.4",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-sourcemaps": "^0.4.2",
-    "rollup-plugin-typescript2": "^0.11.1",
     "semantic-release": "^12.4.1",
     "ts-jest": "^22.0.0",
     "ts-node": "^4.1.0",
@@ -103,7 +96,9 @@
     "tslint-config-standard": "^7.0.0",
     "typedoc": "^0.10.0",
     "typescript": "^2.6.2",
-    "validate-commit-msg": "^2.12.2"
+    "validate-commit-msg": "^2.12.2",
+    "bignumber.js": "^6.0.0",
+    "joi": "^13.1.2"
   },
   "peerDependencies": {
     "bignumber.js": "^6.0.0",
