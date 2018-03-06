@@ -1,4 +1,5 @@
-import Joi, { ValidationOptions } from 'joi';
+import * as Joi from 'joi';
+import { ValidationOptions } from 'joi';
 import BigNumber from 'bignumber.js';
 
 export interface Log {
