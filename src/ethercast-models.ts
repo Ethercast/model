@@ -43,7 +43,7 @@ export interface Block {
   gasUsed: string;
   logsBloom: string;
   miner: string;
-  mixHash: string;
+  mixHash?: string;
   nonce: string;
   number: string;
   parentHash: string;
@@ -115,7 +115,7 @@ export const JoiBlock = Joi.object({
   gasUsed: hex.required(),
   logsBloom: hex.required(),
   miner: address.required(),
-  mixHash: hex.required(),
+  mixHash: hex,
   nonce: hex.required(),
   number: hex.required(),
   parentHash: hex256.required(),
