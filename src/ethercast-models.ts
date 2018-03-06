@@ -1,4 +1,4 @@
-import * as Joi from 'joi';
+import Joi, { ValidationOptions } from 'joi';
 import BigNumber from 'bignumber.js';
 
 export interface Log {
@@ -192,8 +192,8 @@ export function mustBeValidTransactionReceipt(transactionReceipt: TransactionRec
   return validate(transactionReceipt, JoiTransactionReceipt);
 }
 
-export function validate<T>(item: T, schema: Joi.Schema): T {
-  const { error, value } = schema.validate(item, { allowUnknown: false, convert: false });
+export function validate<T>(item: T, schema: Joi.Schema, options?: ValidationOptions): T {
+  const { error, value } = schema.validate(item, { allowUnknown: true, convert: false, ...options });
 
   if (error && error.details && error.details.length > 0) {
     throw new Error('schema validation failed: ' + error.message);

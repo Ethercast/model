@@ -20,11 +20,7 @@ describe('ethercast-models', () => {
           .toThrow();
       });
 
-      it('succeeds with good blocks', () => {
-
-        expect(() => mustBeValidBlockWithFullTransactions({ unknown: 'key' } as any))
-          .not.toThrow();
-      })
+      it('succeeds with good blocks');
     });
   });
 
