@@ -29,7 +29,7 @@
     "commit": "git-cz",
     "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "config": {
     "commitizen": {
