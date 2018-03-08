@@ -1,6 +1,5 @@
 import * as Joi from 'joi';
 import { ValidationOptions } from 'joi';
-import BigNumber from 'bignumber.js';
 
 export interface Log {
   logIndex: string;
@@ -78,13 +77,6 @@ export interface BlockWithTransactionHashes extends Block {
 
 export interface BlockWithFullTransactions extends Block {
   transactions: Transaction[];
-}
-
-export interface LogFilter {
-  topics?: (string | string[])[];
-  fromBlock: string | BigNumber | number | 'latest' | 'earliest' | 'pending';
-  toBlock: string | BigNumber | number | 'latest' | 'earliest' | 'pending';
-  address?: string;
 }
 
 const hex = Joi.string().regex(/^0x[0-9A-Fa-f]*$/);
