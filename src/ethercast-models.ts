@@ -150,7 +150,7 @@ export const JoiTransaction = Joi.object({
   blockNumber: hex.required(),
   transactionIndex: hex.required(),
   from: address.required(),
-  to: address.required(),
+  to: address.required().allow(null),
   value: hex.required(),
   gas: hex.required(),
   gasPrice: hex.required(),
