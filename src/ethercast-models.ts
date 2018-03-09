@@ -15,8 +15,10 @@ export interface Log {
 
 export interface DecodedLog extends Log {
   ethercast: {
-    __ethercastEventName: string;
-    [parameter: string]: string | number;
+    eventName: string;
+    parameters: {
+      [parameter: string]: any;
+    }
   }
 }
 
@@ -32,6 +34,15 @@ export interface Transaction {
   gas: string;
   gasPrice: string;
   input: string;
+}
+
+export interface DecodedTransaction extends Transaction {
+  ethercast: {
+    methodName: string;
+    parameters: {
+      [parameter: string]: any;
+    }
+  }
 }
 
 export interface Block {
@@ -99,6 +110,13 @@ export const JoiLog = Joi.object({
   removed: Joi.boolean()
 });
 
+export const JoiDecodedLog = JoiLog.keys({
+  ethercast: Joi.object({
+    eventName: Joi.string().allow(''),
+    parameters: Joi.object().unknown(true)
+  })
+});
+
 export const JoiBlock = Joi.object({
   hash: hex256.required(),
   difficulty: hex.required(),
@@ -139,6 +157,13 @@ export const JoiTransaction = Joi.object({
   input: hex.required()
 });
 
+export const JoiDecodedTransaction = JoiTransaction.keys({
+  ethercast: Joi.object({
+    methodName: Joi.string().allow(''),
+    parameters: Joi.object().unknown(true)
+  })
+});
+
 export const JoiBlockWithTransactions = JoiBlock.keys({
   transactions: Joi.array().items(JoiTransaction).required()
 });
@@ -152,7 +177,7 @@ export const JoiTransactionReceipt = Joi.object({
   gasUsed: hex.required(),
   logs: Joi.array().items(JoiLog).required(),
   contractAddress: address.allow(null).required(),
-  from: address.required(),
+  from: address,
   to: Joi.any().when(
     'contractAddress',
     {
@@ -160,13 +185,17 @@ export const JoiTransactionReceipt = Joi.object({
       then: address,
       otherwise: Joi.any().valid(null)
     }
-  ).required(),
+  ),
   logsBloom: hex.required(),
   status: Joi.alternatives().valid('0x0', '0x1')
 });
 
 export function mustBeValidLog(log: Log): Log {
   return validate(log, JoiLog);
+}
+
+export function mustBeValidDecodedLog(decodedLog: DecodedLog): DecodedLog {
+  return validate(decodedLog, JoiDecodedLog);
 }
 
 export function mustBeValidBlockWithTransactionHashes(block: BlockWithTransactionHashes): BlockWithTransactionHashes {
@@ -179,6 +208,10 @@ export function mustBeValidBlockWithFullTransactions(block: BlockWithFullTransac
 
 export function mustBeValidTransaction(transaction: Transaction): Transaction {
   return validate(transaction, JoiTransaction);
+}
+
+export function mustBeValidDecodedTransaction(decodedTransaction: DecodedTransaction): DecodedTransaction {
+  return validate(decodedTransaction, JoiDecodedTransaction);
 }
 
 export function mustBeValidTransactionReceipt(transactionReceipt: TransactionReceipt): TransactionReceipt {
