@@ -29,7 +29,7 @@ export interface Transaction {
   blockNumber: string;
   transactionIndex: string;
   from: string;
-  to: string;
+  to: string | null;
   value: string;
   gas: string;
   gasPrice: string;
