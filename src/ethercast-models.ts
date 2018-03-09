@@ -74,8 +74,8 @@ export interface TransactionReceipt {
   blockHash: string; // hex256
   cumulativeGasUsed: string; // hex
   gasUsed: string; // hex
-  from: string; // hex
-  to: string; // hex
+  from?: string; // hex
+  to?: string; // hex
   contractAddress: string | null; // address
   logs: Log[],
   logsBloom: string // hex
@@ -176,7 +176,7 @@ export const JoiTransactionReceipt = Joi.object({
   cumulativeGasUsed: hex.required(),
   gasUsed: hex.required(),
   logs: Joi.array().items(JoiLog).required(),
-  contractAddress: address.allow(null).required(),
+  contractAddress: address.allow(null),
   from: address,
   to: Joi.any().when(
     'contractAddress',

@@ -1,4 +1,5 @@
-import { JoiBlock, mustBeValidBlockWithFullTransactions } from '../src/ethercast-models';
+import { JoiBlock, mustBeValidBlockWithFullTransactions, mustBeValidTransactionReceipt } from '../src/ethercast-models';
+import { PARITY_EXAMPLE_BLOCK_WITH_FULL_TRANSACTIONS, PARITY_EXAMPLE_TRANSACTION_RECEIPT } from './parity-test-data';
 
 describe('ethercast-models', () => {
   describe('JoiBlock', () => {
@@ -20,7 +21,20 @@ describe('ethercast-models', () => {
           .toThrow();
       });
 
-      it('succeeds with good blocks');
+      it('succeeds with example parity kovan block', () => {
+        expect(
+          () => mustBeValidBlockWithFullTransactions(PARITY_EXAMPLE_BLOCK_WITH_FULL_TRANSACTIONS as any)
+        ).not.toThrow();
+      });
+
+    });
+
+    describe('mustBeValidTransactionReceipt', () => {
+      it('succeeds with a transaction receipt from kovan parity', () => {
+        expect(
+          () => mustBeValidTransactionReceipt(PARITY_EXAMPLE_TRANSACTION_RECEIPT as any)
+        ).not.toThrow();
+      });
     });
   });
 
