@@ -10,7 +10,7 @@ export interface Log {
   address: string;
   data: string;
   topics: string[];
-  removed: boolean;
+  removed?: boolean;
 }
 
 export interface DecodedLog extends Log {
@@ -96,7 +96,7 @@ export const JoiLog = Joi.object({
   address: address.required(),
   data: hex.required(),
   topics: Joi.array().items(topic).min(1).max(4).required(),
-  removed: Joi.boolean().required()
+  removed: Joi.boolean()
 });
 
 export const JoiBlock = Joi.object({
