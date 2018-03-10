@@ -20,7 +20,7 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs",
+    "build": "tsc --module commonjs && typedoc --out docs --target es6 --theme minimal --mode file src",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:prod": "npm run test -- --coverage --no-cache",
