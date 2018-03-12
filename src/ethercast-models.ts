@@ -67,6 +67,9 @@ export interface Block {
   uncles: string[];
 }
 
+// 0x0 (FAILURE) or 0x1 (SUCCESS)
+export type TransactionReceiptStatus = '0x0' | '0x1';
+
 export interface TransactionReceipt {
   transactionHash: string; // hex256
   transactionIndex: string; // hex
@@ -79,7 +82,7 @@ export interface TransactionReceipt {
   contractAddress: string | null; // address
   logs: Log[],
   logsBloom: string // hex
-  status: '0x0' | '0x1'; // hex, 0x0 (FAILURE) or 0x1 (SUCCESS)
+  status: TransactionReceiptStatus;
 }
 
 export interface BlockWithTransactionHashes extends Block {
@@ -106,7 +109,7 @@ export const JoiLog = Joi.object({
   transactionIndex: hexUint.required(),
   address: address.required(),
   data: hex.required(),
-  topics: Joi.array().items(topic).min(1).max(4).required(),
+  topics: Joi.array().items(topic).max(4).required(),
   removed: Joi.boolean()
 });
 
