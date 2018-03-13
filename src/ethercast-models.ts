@@ -164,8 +164,8 @@ export const JoiTransaction = Joi.object({
   input: hex.required(),
   // these are included by both geth and parity but not required
   v: hex,
-  r: hex256,
-  s: hex256
+  r: hex,
+  s: hex
 });
 
 export const JoiDecodedTransaction = JoiTransaction.keys({
