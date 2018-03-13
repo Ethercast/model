@@ -34,6 +34,10 @@ export interface Transaction {
   gas: string;
   gasPrice: string;
   input: string;
+  // these are included by both geth and parity but not required
+  v?: string;
+  r?: string;
+  s?: string;
 }
 
 export interface DecodedTransaction extends Transaction {
@@ -157,7 +161,11 @@ export const JoiTransaction = Joi.object({
   value: hex.required(),
   gas: hex.required(),
   gasPrice: hex.required(),
-  input: hex.required()
+  input: hex.required(),
+  // these are included by both geth and parity but not required
+  v: hex,
+  r: hex256,
+  s: hex256
 });
 
 export const JoiDecodedTransaction = JoiTransaction.keys({
