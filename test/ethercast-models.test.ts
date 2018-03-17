@@ -1,10 +1,18 @@
+import 'jest';
 import {
-  JoiBlock, mustBeValidBlockWithFullTransactions, mustBeValidLog, mustBeValidTransaction,
+  JoiBlock,
+  mustBeValidBlockWithFullTransactions,
+  mustBeValidLog,
+  mustBeValidTransaction,
   mustBeValidTransactionReceipt
 } from '../src/ethercast-models';
 import {
-  PARITY_EXAMPLE_BLOCK_WITH_FULL_TRANSACTIONS, PARITY_EXAMPLE_EMPTY_BLOCK, PARITY_EXAMPLE_NO_FROM_BLOCK,
-  PARITY_EXAMPLE_TRANSACTION_RECEIPT, PARITY_TX_NO_TOPICS, PARITY_TX_RECEIPT_NO_LOGS
+  PARITY_EXAMPLE_BLOCK_WITH_FULL_TRANSACTIONS,
+  PARITY_EXAMPLE_EMPTY_BLOCK,
+  PARITY_EXAMPLE_NO_FROM_BLOCK,
+  PARITY_EXAMPLE_TRANSACTION_RECEIPT,
+  PARITY_TX_NO_TOPICS,
+  PARITY_TX_RECEIPT_NO_LOGS
 } from './parity-test-data';
 
 describe('ethercast-models', () => {
