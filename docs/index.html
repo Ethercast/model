@@ -1077,7 +1077,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Transaction<wbr>Receipt<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"0x0"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"0x1"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/types.ts#L72">types.ts:72</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/types.ts#L72">types.ts:72</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1090,7 +1090,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StringSchema</span><span class="tsd-signature-symbol"> =&nbsp;JoiHex160</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L18">validation.ts:18</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L18">validation.ts:18</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1100,7 +1100,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ObjectSchema</span><span class="tsd-signature-symbol"> =&nbsp;Joi.object({hash: JoiHex256.required(),difficulty: JoiHex.required(),extraData: JoiHex.required(),gasLimit: JoiHex.required(),gasUsed: JoiHex.required(),logsBloom: JoiHex.required(),miner: JoiAddress.required(),mixHash: JoiHex,nonce: JoiHex,number: JoiHex.required(),parentHash: JoiHex256.required(),receiptsRoot: JoiHex.required(),sha3Uncles: JoiHex256.required(),size: JoiHex.required(),stateRoot: JoiHex.required(),timestamp: JoiHex.required(),totalDifficulty: JoiHex.required(),transactionsRoot: JoiHex256.required(),uncles: Joi.array().items(JoiHex256).required()})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L40">validation.ts:40</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L40">validation.ts:40</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1110,7 +1110,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Block<wbr>With<wbr>Transaction<wbr>Hashes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ObjectSchema</span><span class="tsd-signature-symbol"> =&nbsp;JoiBlock.keys({transactions: Joi.array().items(JoiHex256).required()})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L62">validation.ts:62</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L62">validation.ts:62</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1120,7 +1120,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Block<wbr>With<wbr>Transactions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ObjectSchema</span><span class="tsd-signature-symbol"> =&nbsp;JoiBlock.keys({transactions: Joi.array().items(JoiTransaction).required()})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L91">validation.ts:91</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L91">validation.ts:91</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1130,7 +1130,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Decoded<wbr>Log<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ObjectSchema</span><span class="tsd-signature-symbol"> =&nbsp;JoiLog.keys({ethercast: Joi.object({eventName: Joi.string().allow(&#x27;&#x27;),parameters: Joi.object().unknown(true)})})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L33">validation.ts:33</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L33">validation.ts:33</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1140,7 +1140,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Decoded<wbr>Transaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ObjectSchema</span><span class="tsd-signature-symbol"> =&nbsp;JoiTransaction.keys({ethercast: Joi.object({methodName: Joi.string().allow(&#x27;&#x27;),parameters: Joi.object().unknown(true)})})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L84">validation.ts:84</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L84">validation.ts:84</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1150,7 +1150,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Hex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StringSchema</span><span class="tsd-signature-symbol"> =&nbsp;Joi.string().regex(/^0x[0-9A-Fa-f]*$/)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L13">validation.ts:13</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L13">validation.ts:13</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1160,7 +1160,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Hex160<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StringSchema</span><span class="tsd-signature-symbol"> =&nbsp;JoiHex.length(42)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L15">validation.ts:15</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L15">validation.ts:15</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1170,7 +1170,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Hex256<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StringSchema</span><span class="tsd-signature-symbol"> =&nbsp;JoiHex.length(66)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L14">validation.ts:14</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L14">validation.ts:14</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1180,7 +1180,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Hex<wbr>Uint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StringSchema</span><span class="tsd-signature-symbol"> =&nbsp;JoiHex.max(66)</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L16">validation.ts:16</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L16">validation.ts:16</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1190,7 +1190,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Log<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ObjectSchema</span><span class="tsd-signature-symbol"> =&nbsp;Joi.object({logIndex: JoiHexUint.required(),blockNumber: JoiHexUint.required(),blockHash: JoiHex256.required(),transactionHash: JoiHex256.required(),transactionIndex: JoiHexUint.required(),address: JoiAddress.required(),data: JoiHex.required(),topics: Joi.array().items(JoiTopic).max(4).required(),removed: Joi.boolean()})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L21">validation.ts:21</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L21">validation.ts:21</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1200,7 +1200,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Topic<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">StringSchema</span><span class="tsd-signature-symbol"> =&nbsp;JoiHex256</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L19">validation.ts:19</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L19">validation.ts:19</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1210,7 +1210,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Transaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ObjectSchema</span><span class="tsd-signature-symbol"> =&nbsp;Joi.object({hash: JoiHex256.required(),nonce: JoiHex.required(),blockHash: JoiHex256.required(),blockNumber: JoiHex.required(),transactionIndex: JoiHex.required(),from: JoiAddress.required(),to: JoiAddress.required().allow(null),value: JoiHex.required(),gas: JoiHex.required(),gasPrice: JoiHex.required(),input: JoiHex.required(),// these are included by both geth and parity but not requiredv: JoiHex,r: JoiHex,s: JoiHex})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L66">validation.ts:66</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L66">validation.ts:66</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1220,7 +1220,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">Joi<wbr>Transaction<wbr>Receipt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ObjectSchema</span><span class="tsd-signature-symbol"> =&nbsp;Joi.object({transactionHash: JoiHex256.required(),transactionIndex: JoiHex.required(),blockNumber: JoiHex.required(),blockHash: JoiHex256.required(),cumulativeGasUsed: JoiHex.required(),gasUsed: JoiHex.required(),logs: Joi.array().items(JoiLog).required(),contractAddress: JoiAddress.allow(null),from: JoiAddress,to: Joi.any().when(&#x27;contractAddress&#x27;,{is: null,then: JoiAddress,otherwise: Joi.any().valid(null)}),logsBloom: JoiHex.required(),status: Joi.alternatives().valid(&#x27;0x0&#x27;, &#x27;0x1&#x27;)})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L95">validation.ts:95</a></li>
+						<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L95">validation.ts:95</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -1237,7 +1237,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L129">validation.ts:129</a></li>
+								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L129">validation.ts:129</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1260,7 +1260,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L125">validation.ts:125</a></li>
+								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L125">validation.ts:125</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1283,7 +1283,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L121">validation.ts:121</a></li>
+								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L121">validation.ts:121</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1306,7 +1306,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L137">validation.ts:137</a></li>
+								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L137">validation.ts:137</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1329,7 +1329,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L117">validation.ts:117</a></li>
+								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L117">validation.ts:117</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1352,7 +1352,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L133">validation.ts:133</a></li>
+								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L133">validation.ts:133</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1375,7 +1375,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L141">validation.ts:141</a></li>
+								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L141">validation.ts:141</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1398,7 +1398,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/c640a36/src/validation.ts#L145">validation.ts:145</a></li>
+								<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/78dd982/src/validation.ts#L145">validation.ts:145</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
