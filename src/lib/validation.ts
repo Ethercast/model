@@ -1,5 +1,4 @@
 import * as Joi from 'joi';
-import { ValidationOptions } from 'joi';
 import {
   BlockWithFullTransactions,
   BlockWithTransactionHashes,
@@ -26,7 +25,10 @@ export const JoiLog = Joi.object({
   transactionIndex: JoiHexUint.required(),
   address: JoiAddress.required(),
   data: JoiHex.required(),
-  topics: Joi.array().items(JoiTopic).max(4).required(),
+  topics: Joi.array()
+    .items(JoiTopic)
+    .max(4)
+    .required(),
   removed: Joi.boolean()
 });
 
@@ -56,11 +58,15 @@ export const JoiBlock = Joi.object({
   timestamp: JoiHex.required(),
   totalDifficulty: JoiHex.required(),
   transactionsRoot: JoiHex256.required(),
-  uncles: Joi.array().items(JoiHex256).required()
+  uncles: Joi.array()
+    .items(JoiHex256)
+    .required()
 });
 
 export const JoiBlockWithTransactionHashes = JoiBlock.keys({
-  transactions: Joi.array().items(JoiHex256).required()
+  transactions: Joi.array()
+    .items(JoiHex256)
+    .required()
 });
 
 export const JoiTransaction = Joi.object({
@@ -89,7 +95,9 @@ export const JoiDecodedTransaction = JoiTransaction.keys({
 });
 
 export const JoiBlockWithTransactions = JoiBlock.keys({
-  transactions: Joi.array().items(JoiTransaction).required()
+  transactions: Joi.array()
+    .items(JoiTransaction)
+    .required()
 });
 
 export const JoiTransactionReceipt = Joi.object({
@@ -99,17 +107,16 @@ export const JoiTransactionReceipt = Joi.object({
   blockHash: JoiHex256.required(),
   cumulativeGasUsed: JoiHex.required(),
   gasUsed: JoiHex.required(),
-  logs: Joi.array().items(JoiLog).required(),
+  logs: Joi.array()
+    .items(JoiLog)
+    .required(),
   contractAddress: JoiAddress.allow(null),
   from: JoiAddress,
-  to: Joi.any().when(
-    'contractAddress',
-    {
-      is: null,
-      then: JoiAddress,
-      otherwise: Joi.any().valid(null)
-    }
-  ),
+  to: Joi.any().when('contractAddress', {
+    is: null,
+    then: JoiAddress,
+    otherwise: Joi.any().valid(null)
+  }),
   logsBloom: JoiHex.required(),
   status: Joi.alternatives().valid('0x0', '0x1')
 });
@@ -122,11 +129,15 @@ export function mustBeValidDecodedLog(decodedLog: DecodedLog): DecodedLog {
   return validate(decodedLog, JoiDecodedLog);
 }
 
-export function mustBeValidBlockWithTransactionHashes(block: BlockWithTransactionHashes): BlockWithTransactionHashes {
+export function mustBeValidBlockWithTransactionHashes(
+  block: BlockWithTransactionHashes
+): BlockWithTransactionHashes {
   return validate(block, JoiBlockWithTransactionHashes);
 }
 
-export function mustBeValidBlockWithFullTransactions(block: BlockWithFullTransactions): BlockWithFullTransactions {
+export function mustBeValidBlockWithFullTransactions(
+  block: BlockWithFullTransactions
+): BlockWithFullTransactions {
   return validate(block, JoiBlockWithTransactions);
 }
 
@@ -134,16 +145,24 @@ export function mustBeValidTransaction(transaction: Transaction): Transaction {
   return validate(transaction, JoiTransaction);
 }
 
-export function mustBeValidDecodedTransaction(decodedTransaction: DecodedTransaction): DecodedTransaction {
+export function mustBeValidDecodedTransaction(
+  decodedTransaction: DecodedTransaction
+): DecodedTransaction {
   return validate(decodedTransaction, JoiDecodedTransaction);
 }
 
-export function mustBeValidTransactionReceipt(transactionReceipt: TransactionReceipt): TransactionReceipt {
+export function mustBeValidTransactionReceipt(
+  transactionReceipt: TransactionReceipt
+): TransactionReceipt {
   return validate(transactionReceipt, JoiTransactionReceipt);
 }
 
-export function validate<T>(item: T, schema: Joi.Schema, options?: ValidationOptions): T {
-  const { error, value } = schema.validate(item, { allowUnknown: true, convert: false, ...options });
+export function validate<T>(item: T, schema: Joi.Schema, options?: Joi.ValidationOptions): T {
+  const { error, value } = schema.validate(item, {
+    allowUnknown: true,
+    convert: false,
+    ...options
+  });
 
   if (error && error.details && error.details.length > 0) {
     throw new Error('schema validation failed: ' + error.message);

@@ -15,8 +15,8 @@ export interface DecodedLog extends Log {
     eventName: string;
     parameters: {
       [parameter: string]: any;
-    }
-  }
+    };
+  };
 }
 
 export interface Transaction {
@@ -42,8 +42,8 @@ export interface DecodedTransaction extends Transaction {
     methodName: string;
     parameters: {
       [parameter: string]: any;
-    }
-  }
+    };
+  };
 }
 
 export interface Block {
@@ -81,8 +81,8 @@ export interface TransactionReceipt {
   from?: string; // hex
   to?: string; // hex
   contractAddress: string | null; // address
-  logs: Log[],
-  logsBloom: string // hex
+  logs: Log[];
+  logsBloom: string; // hex
   status: TransactionReceiptStatus;
 }
 
