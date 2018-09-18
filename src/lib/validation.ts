@@ -115,10 +115,10 @@ export const JoiTransactionReceipt = Joi.object({
   to: Joi.any().when('contractAddress', {
     is: null,
     then: JoiAddress,
-    otherwise: Joi.any().valid(null)
+    otherwise: Joi.any().only(null)
   }),
   logsBloom: JoiHex.required(),
-  status: Joi.alternatives().valid('0x0', '0x1')
+  status: Joi.any().only('0x0', '0x1')
 });
 
 export function mustBeValidLog(log: Log): Log {
