@@ -1,3 +1,4 @@
+import schema from './schema.json';
 import {
   BlockWithFullTransactions,
   BlockWithTransactionHashes,
@@ -8,14 +9,22 @@ import {
   TransactionReceipt
 } from './types';
 
+/**
+ * @hidden
+ */
 const Ajv = require('ajv');
-import schema from './schema.json';
 
+/**
+ * @hidden
+ */
 const ajv = new Ajv({ allErrors: true });
 
 ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-06.json'));
 ajv.addSchema(schema);
 
+/**
+ * @hidden
+ */
 export function validate<TValue, TSchemaKey extends keyof typeof schema.definitions>(
   value: TValue,
   schemaKey: TSchemaKey
