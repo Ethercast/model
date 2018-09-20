@@ -1,6 +1,6 @@
 {
   "name": "@ethercast/model",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "models and json schemas for ethercast.io and ethercast.io subscribers",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
