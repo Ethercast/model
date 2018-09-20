@@ -1,10 +1,14 @@
 export type SubscriptionStatus = 'active' | 'deactivated';
+export const SubscriptionStatuses: SubscriptionStatus[] = ['active', 'deactivated'];
 
 export type SubscriptionType = 'log' | 'transaction';
+export const SubscriptionTypes: SubscriptionType[] = ['log', 'transaction'];
 
 export type LogFilterType = 'address' | 'topic0' | 'topic1' | 'topic2' | 'topic3';
+export const LogFilterTypes: LogFilterType[] = ['address', 'topic0', 'topic1', 'topic2', 'topic3'];
 
 export type TransactionFilterType = 'from' | 'to' | 'methodSignature';
+export const TransactionFilterTypes: TransactionFilterType[] = ['from', 'to', 'methodSignature'];
 
 export type FilterOptionValue = string | string[] | null;
 export type LogSubscriptionFilters = { [filterType in LogFilterType]?: FilterOptionValue };
