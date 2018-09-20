@@ -128,6 +128,9 @@ export interface BlockWithFullTransactions extends Block {
   [key: string]: any;
 }
 
+/**
+ * @hidden
+ */
 export type Schema =
   | BlockWithFullTransactions
   | BlockWithTransactionHashes
