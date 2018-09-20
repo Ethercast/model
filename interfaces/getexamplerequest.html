@@ -3,17 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@ethercast/model</title>
+	<title>GetExampleRequest | @ethercast/model</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@ethercast/model</a>
+					<a href="../index.html" class="title">@ethercast/model</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,161 +53,188 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="getexamplerequest.html">GetExampleRequest</a>
 				</li>
 			</ul>
-			<h1> @ethercast/model</h1>
+			<h1>Interface GetExampleRequest</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<h1 id="-ethercast-model">@ethercast/model</h1>
-				<p><a href="https://travis-ci.org/Ethercast/model"><img src="https://travis-ci.org/Ethercast/model.svg?branch=master" alt="Build Status"></a>
-					<a href="https://codecov.io/gh/Ethercast/model"><img src="https://codecov.io/gh/Ethercast/model/branch/master/graph/badge.svg" alt="codecov"></a>
-				<a href="https://www.npmjs.com/package/@ethercast/model"><img src="https://img.shields.io/npm/v/@ethercast/model.svg?style=flat" alt="NPM version"></a></p>
-				<p>Models for the <a href="https://ethercast.io">Ethercast</a> service</p>
-				<p>These models are delivered to the subscribed webhooks (particularly, Logs and Transactions)
-				and also used in the API</p>
-				<h2 id="installation">Installation</h2>
-				<p><code>npm install --save @ethercast/model</code></p>
-				<h2 id="usage">Usage</h2>
-				<p>The exports of <code>@ethercast/model</code> are:</p>
-				<ul>
-					<li>a set of TypeScript interfaces representing the types passed around by Ethercast, e.g. Logs, Transactions and Blocks: <code>EthereumTypes</code></li>
-					<li>a set of TypeScript interfaces representing the schema of the public Ethercast API <code>EthercastTypes</code></li>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">GetExampleRequest</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="getexampletransactionrequest.html" class="tsd-signature-type">GetExampleTransactionRequest</a>
+							</li>
+							<li>
+								<a href="getexamplelogrequest.html" class="tsd-signature-type">GetExampleLogRequest</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
-				<p>You can use the TypeScript interfaces when writing TypeScript code to handle Webhooks or communicate with the API.</p>
-				<p>The standard draft 6 JSON schemas are useful for a variety of use cases, including validating requests sent
-				to your webhooks. </p>
-				<p>To use the JSON schemas, you must import one of:</p>
-				<ul>
-					<li><code>@ethercast/model/ethercast-api-types-schema.json</code></li>
-					<li><code>@ethercast/model/ethereum-types.json</code></li>
-				</ul>
-				<h2 id="api-docs">API Docs</h2>
-				<p><a href="https://docs.ethercast.io/model/index.html">https://docs.ethercast.io/model/index.html</a></p>
-			</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="getexamplerequest.html#type" class="tsd-kind-icon">type</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="type" class="tsd-anchor"></a>
+					<h3>type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <a href="../globals.html#subscriptiontype" class="tsd-signature-type">SubscriptionType</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Ethercast/ethercast-model/blob/a5ed928/src/lib/ethercast-api-types.ts#L94">lib/ethercast-api-types.ts:94</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-is-external">
-						<a href="enums/scope.html" class="tsd-kind-icon">Scope</a>
+						<a href="../enums/scope.html" class="tsd-kind-icon">Scope</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/apikey.html" class="tsd-kind-icon">Api<wbr>Key</a>
+						<a href="apikey.html" class="tsd-kind-icon">Api<wbr>Key</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/block.html" class="tsd-kind-icon">Block</a>
+						<a href="block.html" class="tsd-kind-icon">Block</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/blockwithfulltransactions.html" class="tsd-kind-icon">Block<wbr>With<wbr>Full<wbr>Transactions</a>
+						<a href="blockwithfulltransactions.html" class="tsd-kind-icon">Block<wbr>With<wbr>Full<wbr>Transactions</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/blockwithtransactionhashes.html" class="tsd-kind-icon">Block<wbr>With<wbr>Transaction<wbr>Hashes</a>
+						<a href="blockwithtransactionhashes.html" class="tsd-kind-icon">Block<wbr>With<wbr>Transaction<wbr>Hashes</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/createapikeyrequest.html" class="tsd-kind-icon">Create<wbr>Api<wbr>Key<wbr>Request</a>
+						<a href="createapikeyrequest.html" class="tsd-kind-icon">Create<wbr>Api<wbr>Key<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/createlogsubscriptionrequest.html" class="tsd-kind-icon">Create<wbr>Log<wbr>Subscription<wbr>Request</a>
+						<a href="createlogsubscriptionrequest.html" class="tsd-kind-icon">Create<wbr>Log<wbr>Subscription<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/createsubscriptionrequest.html" class="tsd-kind-icon">Create<wbr>Subscription<wbr>Request</a>
+						<a href="createsubscriptionrequest.html" class="tsd-kind-icon">Create<wbr>Subscription<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/createtransactionsubscriptionrequest.html" class="tsd-kind-icon">Create<wbr>Transaction<wbr>Subscription<wbr>Request</a>
+						<a href="createtransactionsubscriptionrequest.html" class="tsd-kind-icon">Create<wbr>Transaction<wbr>Subscription<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/decodedlog.html" class="tsd-kind-icon">Decoded<wbr>Log</a>
+						<a href="decodedlog.html" class="tsd-kind-icon">Decoded<wbr>Log</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/decodedtransaction.html" class="tsd-kind-icon">Decoded<wbr>Transaction</a>
+						<a href="decodedtransaction.html" class="tsd-kind-icon">Decoded<wbr>Transaction</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/getexamplelogrequest.html" class="tsd-kind-icon">Get<wbr>Example<wbr>Log<wbr>Request</a>
+						<a href="getexamplelogrequest.html" class="tsd-kind-icon">Get<wbr>Example<wbr>Log<wbr>Request</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-is-external">
+						<a href="getexamplerequest.html" class="tsd-kind-icon">Get<wbr>Example<wbr>Request</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="getexamplerequest.html#type" class="tsd-kind-icon">type</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="getexampletransactionrequest.html" class="tsd-kind-icon">Get<wbr>Example<wbr>Transaction<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/getexamplerequest.html" class="tsd-kind-icon">Get<wbr>Example<wbr>Request</a>
+						<a href="log.html" class="tsd-kind-icon">Log</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/getexampletransactionrequest.html" class="tsd-kind-icon">Get<wbr>Example<wbr>Transaction<wbr>Request</a>
+						<a href="logsubscription.html" class="tsd-kind-icon">Log<wbr>Subscription</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/log.html" class="tsd-kind-icon">Log</a>
+						<a href="subscription.html" class="tsd-kind-icon">Subscription</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/logsubscription.html" class="tsd-kind-icon">Log<wbr>Subscription</a>
+						<a href="transaction.html" class="tsd-kind-icon">Transaction</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/subscription.html" class="tsd-kind-icon">Subscription</a>
+						<a href="transactionreceipt.html" class="tsd-kind-icon">Transaction<wbr>Receipt</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/transaction.html" class="tsd-kind-icon">Transaction</a>
+						<a href="transactionsubscription.html" class="tsd-kind-icon">Transaction<wbr>Subscription</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/transactionreceipt.html" class="tsd-kind-icon">Transaction<wbr>Receipt</a>
+						<a href="webhookreceipt.html" class="tsd-kind-icon">Webhook<wbr>Receipt</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/transactionsubscription.html" class="tsd-kind-icon">Transaction<wbr>Subscription</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/webhookreceipt.html" class="tsd-kind-icon">Webhook<wbr>Receipt</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/webhookreceiptresult.html" class="tsd-kind-icon">Webhook<wbr>Receipt<wbr>Result</a>
+						<a href="webhookreceiptresult.html" class="tsd-kind-icon">Webhook<wbr>Receipt<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#address" class="tsd-kind-icon">Address</a>
+						<a href="../globals.html#address" class="tsd-kind-icon">Address</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#filteroptionvalue" class="tsd-kind-icon">Filter<wbr>Option<wbr>Value</a>
+						<a href="../globals.html#filteroptionvalue" class="tsd-kind-icon">Filter<wbr>Option<wbr>Value</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#hex" class="tsd-kind-icon">Hex</a>
+						<a href="../globals.html#hex" class="tsd-kind-icon">Hex</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#hex160" class="tsd-kind-icon">Hex160</a>
+						<a href="../globals.html#hex160" class="tsd-kind-icon">Hex160</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#hex256" class="tsd-kind-icon">Hex256</a>
+						<a href="../globals.html#hex256" class="tsd-kind-icon">Hex256</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#id" class="tsd-kind-icon">ID</a>
+						<a href="../globals.html#id" class="tsd-kind-icon">ID</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#logfiltertype" class="tsd-kind-icon">Log<wbr>Filter<wbr>Type</a>
+						<a href="../globals.html#logfiltertype" class="tsd-kind-icon">Log<wbr>Filter<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#logsubscriptionfilters" class="tsd-kind-icon">Log<wbr>Subscription<wbr>Filters</a>
+						<a href="../globals.html#logsubscriptionfilters" class="tsd-kind-icon">Log<wbr>Subscription<wbr>Filters</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#subscriptionstatus" class="tsd-kind-icon">Subscription<wbr>Status</a>
+						<a href="../globals.html#subscriptionstatus" class="tsd-kind-icon">Subscription<wbr>Status</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#subscriptiontype" class="tsd-kind-icon">Subscription<wbr>Type</a>
+						<a href="../globals.html#subscriptiontype" class="tsd-kind-icon">Subscription<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#topic" class="tsd-kind-icon">Topic</a>
+						<a href="../globals.html#topic" class="tsd-kind-icon">Topic</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#transactionfiltertype" class="tsd-kind-icon">Transaction<wbr>Filter<wbr>Type</a>
+						<a href="../globals.html#transactionfiltertype" class="tsd-kind-icon">Transaction<wbr>Filter<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#transactionreceiptstatus" class="tsd-kind-icon">Transaction<wbr>Receipt<wbr>Status</a>
+						<a href="../globals.html#transactionreceiptstatus" class="tsd-kind-icon">Transaction<wbr>Receipt<wbr>Status</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-is-external">
-						<a href="globals.html#transactionsubscriptionfilters" class="tsd-kind-icon">Transaction<wbr>Subscription<wbr>Filters</a>
+						<a href="../globals.html#transactionsubscriptionfilters" class="tsd-kind-icon">Transaction<wbr>Subscription<wbr>Filters</a>
 					</li>
 				</ul>
 			</nav>
@@ -277,7 +304,7 @@
 	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
