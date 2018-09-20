@@ -1,12 +1,15 @@
 {
   "name": "@ethercast/model",
-  "version": "2.0.3",
-  "description": "models for ethercast.io webhooks",
+  "version": "3.0.0",
+  "description": "models and json schemas for ethercast.io and ethercast.io subscribers",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
   "repository": "https://github.com/ethercast/model",
   "license": "MIT",
+  "files": [
+    "build"
+  ],
   "keywords": [
     "web3",
     "ethercast",
@@ -18,13 +21,19 @@
   "scripts": {
     "info": "npm-scripts-info",
     "build": "run-s clean && run-p build:*",
+    "build:mkdir": "mkdir -p build",
+    "build:schema": "run-s regenerate-schema:*",
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:tslint": "tslint --fix --project .",
-    "regenerate-schema": "ts-json-schema-generator --path 'src/lib/types.ts' --expose 'all' --type 'Schema' --jsDoc 'basic' | echo \"export default $(cat -)\" > src/lib/schema.json.ts && npm run fix:tslint",
-    "test": "run-s build test:*",
+    "schema:base": "ts-json-schema-generator --expose 'all' --type 'Schema' --jsDoc 'basic'",
+    "schema:eth": "npm run schema:base -- --path 'src/lib/ethereum-types.ts'",
+    "schema:cast": "npm run schema:base -- --path 'src/lib/ethercast-api-types.ts'",
+    "regenerate-schema:eth": "npm run -s schema:eth > build/ethereum-types-schema.json",
+    "regenerate-schema:cast": "npm run -s schema:cast > build/ethercast-api-types-schema.json",
+    "test": "run-s test:*",
     "test:lint": "tslint --project . && prettier \"src/**/*.ts\" --list-different",
     "test:unit": "nyc --silent ava",
     "watch": "run-s clean build:main && run-p \"build:main -- -w\" \"test:unit -- --watch\"",
@@ -39,7 +48,7 @@
     "version": "standard-version",
     "reset": "git clean -dfx && git reset --hard && npm i",
     "clean": "trash build test",
-    "all": "run-s reset test cov:check doc:html",
+    "all": "run-s reset test build cov:check doc:html",
     "prepare-release": "run-s all version doc:publish"
   },
   "scripts-info": {
@@ -58,9 +67,7 @@
   "engines": {
     "node": ">=8.9"
   },
-  "dependencies": {
-    "ajv": "^6.5.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "ava": "1.0.0-beta.7",
     "codecov": "^3.0.2",
@@ -73,6 +80,7 @@
     "standard-version": "^4.4.0",
     "trash-cli": "^1.4.0",
     "ts-json-schema-generator": "^0.33.0",
+    "ts-node": "^7.0.1",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-immutable": "^4.5.4",
@@ -81,11 +89,18 @@
   },
   "ava": {
     "failFast": true,
+    "compileEnhancements": false,
     "files": [
-      "build/main/**/*.spec.js"
+      "src/**/*.spec.ts"
     ],
     "sources": [
-      "build/main/**/*.js"
+      "src/**/*.ts"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
     ]
   },
   "config": {

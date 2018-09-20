@@ -129,6 +129,7 @@ export interface BlockWithFullTransactions extends Block {
 }
 
 /**
+ * This export is necessary for the schema generator to work
  * @hidden
  */
 export type Schema =

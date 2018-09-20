@@ -1,3 +1,4 @@
-export * from './lib/types';
-export * from './lib/validation';
-export { default as schema } from './lib/schema.json';
+import * as EthercastTypes from './lib/ethercast-api-types';
+import * as EthereumTypes from './lib/ethereum-types';
+
+export { EthereumTypes, EthercastTypes };
